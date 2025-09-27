@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import button from './components/Button.jsx'
+import Button from './components/Button.jsx'
+import Card from './components/Card.jsx'
+import Playground from './pages/playground.jsx'
 
 function App() {
-
+  
   return (
-    <button />
+    <>
+      <Playground />
+    </>
+
   )
 }
 

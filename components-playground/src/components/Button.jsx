@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 function Button() {
     const [isDisabled, setIsDisabled] = useState(false)
@@ -37,11 +38,10 @@ function Button() {
 
     return (
     <>
-      <h1>Test</h1>
-
       {/* Main button */}
       <button
         style={appliedStyle}
+        onKeyDown={handleButton}
       >
         {isDisabled ? "Disabled!" : "Press enter!"}
       </button>
@@ -54,3 +54,5 @@ function Button() {
 
     )
 }
+
+export default Button;
