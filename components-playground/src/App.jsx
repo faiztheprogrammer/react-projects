@@ -13,11 +13,20 @@ function App() {
   const styleTheButton = {
     primary: { background: "blue", color: "white", border: "none" },
     secondary: { background: "white", color: "blue", border: "1px solid blue" },
-    ghost: { background: "transparent", color: "gray", border: "none" }
+    ghost: { background: "transparent", color: "gray", border: "none" },
+    disabledStyling: {background: "#ade8f4", color: "black", border: "none"}
   }
 
   // Pick which variant to use (e.g. "primary")
-  const chosenVariant = styleTheButton.primary
+  function variantHandler() {
+    let chosenVariant
+    if(isDisabled) {
+      return chosenVariant = styleTheButton.disabledStyling
+    } else {
+      return chosenVariant = styleTheButton.primary
+    }
+  }
+  
 
   return (
     <>
@@ -25,7 +34,7 @@ function App() {
       <button 
         onKeyDown={handleButton} 
         disabled={isDisabled}
-        style={chosenVariant}
+        style={variantHandler()}
       >
         {isDisabled ? "Disabled!" : "Press enter!"}
       </button>
