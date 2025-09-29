@@ -13,10 +13,10 @@ function Button() {
 
     // Define all possible styles
     const styleTheButton = {
-        primary: { background: "blue", color: "white", border: "none" },
-        secondary: { background: "white", color: "blue", border: "1px solid blue" },
-        ghost: { background: "transparent", color: "gray", border: "none" },
-        disabledStyling: { background: "#ade8f4", color: "black", border: "none" }
+        primary: { background: "blue", color: "white", border: "none", paddingLeft: "10px", paddingRight: "10px", borderRadius: "5px", paddingTop: "5px", paddingBottom: "5px"},
+        secondary: { background: "white", color: "blue", border: "1px solid blue", paddingLeft: "10px", paddingRight: "10px", borderRadius: "5px", paddingTop: "5px", paddingBottom: "5px" },
+        ghost: { background: "transparent", color: "gray", border: "none", paddingLeft: "10px", paddingRight: "10px", borderRadius: "5px", paddingTop: "5px", paddingBottom: "5px" },
+        disabledStyling: { background: "#ade8f4", color: "black", border: "none", paddingLeft: "10px", paddingRight: "10px", borderRadius: "5px", paddingTop: "5px", paddingBottom: "5px" }
     }
 
     // Function to randomly select one style
@@ -46,7 +46,7 @@ function Button() {
       </button>
 
       {/* Random style button */}
-      <button onClick={randomStateSelector} style={{ marginLeft: "10px" }}>
+      <button onClick={randomStateSelector} style={{ marginLeft: "10px"}}>
         Random State
       </button>
     </>
