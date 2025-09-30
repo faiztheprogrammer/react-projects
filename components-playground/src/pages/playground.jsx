@@ -41,7 +41,12 @@ function Playground() {
 
 
             {/* Use the Modal */}
-            <button onClick={() => setIsOpen(true)}>Open Modal</button>
+            <div className='flex justify-center mt-3 mb-10'>
+            <button
+                className='pt-3 pb-3 pl-4 pr-4 rounded-md bg-blue-700 text-white cursor-pointer'
+                onClick={() => setIsOpen(true)}>Open Modal</button>
+
+            </div>
             <Modal isOpen = {isOpen} onClose = {() => setIsOpen(false)} />
         </>
 
