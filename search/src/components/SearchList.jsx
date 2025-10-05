@@ -63,8 +63,8 @@ function SearchList() {
                   borderRadius: "6px",
                 }}
               >
-                <strong>{item.name}</strong>
-                <p style={{ margin: "5px 0", fontSize: "14px" }}>{item.title}</p>
+
+                <strong><p style={{ margin: "5px 0", fontSize: "14px" }}>{item.title}</p></strong>
                 <p style={{ margin: "5px 0", fontSize: "12px" }}>
                   {item.description}
                 </p>
