@@ -84,7 +84,7 @@
 
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function SearchList() {
   let data = [
@@ -110,12 +110,23 @@ function SearchList() {
   ];
 
   let [inputText, setInputText] = useState("");
+  let [deboundedText, setDebouncedText] = useState("")
 
   const filteredData = data.filter((item) => {
-    let text = inputText.toLowerCase();
+    let text = deboundedText.toLowerCase();
     let combined = Object.values(item).join(" ").toLowerCase();
     return combined.includes(text);
   });
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedText(inputText);
+    }, 400)
+
+    return () => {
+      clearTimeout(handler)
+    }
+  }, [inputText])
 
   return (
     <div
