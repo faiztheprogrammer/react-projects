@@ -85,11 +85,11 @@ function ProductList({ selectedCategory, productsArray }) {
         <div className="flex justify-center mt-4">
             <div
                 style={{
-                    backgroundColor: "#FFFFFF",
+                     backgroundColor: "#F9F9F9",
                     borderRadius: "10px",
                     width: "600px",
-                    padding: "20px 30px",
-                    boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+                    padding: "30px",
+                    textAlign: "center",
                 }}
             >
                 <div className="text-center mb-4">
